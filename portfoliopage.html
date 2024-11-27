@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Portfolio</title>
+    <style>
+        body {
+            background: #4f4f4f;
+            margin: 0;
+            font-family: Montserrat, sans-serif;
+        }
+
+         .container {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 2em;
+			margin-top: 100px;
+		}
+
+        .home-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 2rem;
+            color: #FFF682;
+            text-decoration: none;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .home-button:hover {
+            color: #FFD700;
+        }
+
+        .design-card {
+            position: relative;
+            display: inline-block;
+        }
+
+        .design-card img {
+            width: 400px;
+            height: auto;
+            transition: all 0.3s ease;
+        }
+
+        .design-card:hover img {
+            opacity: 0.25;
+            background-color: rgba(255, 246, 130, 0.5);
+        }
+
+        .design-name {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Montserrat, sans-serif;
+            font-size: 24px;
+            font-weight: 450;
+            font-kerning: auto;
+            color: #FFF682;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: center;
+        }
+
+        .design-card:hover .design-name {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Home Button -->
+    <a href="index.html" class="home-button" aria-label="Go to home">
+        &larr; 
+    </a>
+
+    <div class="container">
+
+    <div class="container">	
+        <div class="design-card">
+            <a href="PuzzlePackaging.html">
+                <img src="thumbnails/takeaway.jpg" alt="Takeaway Packaging">
+                <div class="design-name">Packaging Design</div>
+            </a>
+        </div>
+
+        <div class="design-card">
+            <a href="barillarebrand.html">
+                <img src="thumbnails/barilla.jpg" alt="Barilla Rebrand">
+                <div class="design-name">Rebrand</div>
+            </a>
+        </div>
+
+        <div class="design-card">
+            <a href="yogicyasmin.html">
+                <img src="thumbnails/yogicyasmin.jpg" alt="Yogic Yasmin">
+                <div class="design-name">Typography Design</div>
+            </a>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

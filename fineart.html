@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Art</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;450&display=swap" rel="stylesheet">
+</head>
+
+<style type="text/css">
+    
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4f4f4f;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+}
+
+.start-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.start-screen .emoji {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.start-screen p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 450;
+    text-align: center;
+    color: #FFF682;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: opacity 0.5s ease-in-out;
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen" class="start-screen">
+            <span class="emoji">🎨</span>
+            <p>Click me!</p>
+        </div>
+        <img id="image" class="hidden" src="image1.jpg" alt="Image" />
+    </div>
+
+    <script src="art_script.js"></script>
+</body>
+</html>
+   

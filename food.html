@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+<style type="text/css">
+	
+body {
+  background: #4f4f4f
+  } 
+
+  .container {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 2em;
+			margin-top: 100px;
+		}
+
+		.img-bottom-left {
+			position: fixed; 
+			bottom: 0px; 
+			left: 0px; 
+			width: auto; 
+			height: 350px;
+		}
+
+		.card {
+			position: relative;
+			width: 400px;
+			height: auto;
+			overflow: hidden;
+		}
+
+		.card img {
+			width: 100%;
+			height: auto;
+			transition: 0.3s ease;
+		}
+
+		.card:hover img {
+			background-color: #FFF682;
+			opacity: 0.25;
+		}
+
+		.card span {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #FFF682;
+			font-family: Montserrat;
+			font-size: 24px;
+			font-weight: 450;
+			font-kerning: auto;
+			text-align: center;
+			opacity: 0; 
+			transition: 0.3s ease; 
+		}
+
+		.card:hover span {
+			opacity: 1; 
+		}
+
+		.home-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 2rem;
+            color: #FFF682;
+            text-decoration: none;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .home-button:hover {
+            color: #FFD700; 
+        }
+      
+	
+	</style>
+
+</head>
+
+<body>
+	
+	<!-- Home Button -->
+    <a href="index.html" class="home-button" aria-label="Go to home">
+        &larr; 
+    </a> 
+
+	<img src="Rat/eatingRat.gif" class="img-bottom-left">
+
+<div class="container">
+
+<div class="container">
+		<div class="card">
+			<a href="LindustrieReview.html">
+				<img src="foodpics/lindustrie1.jpg" alt="L'Industrie">
+				<span>L'Industrie</span>
+			</a>
+		</div>
+
+		<div class="card">
+			<a href="HangawiReview.html">
+				<img src="foodpics/hangawi.jpg" alt="Hangawi">
+				<span>Hangawi</span>
+			</a>
+		</div>
+		
+		<div class="card">
+			<a href="SpicyMoon.html">
+				<img src="foodpics/spicymoon.jpg" alt="Spicy Moon">
+				<span>Spicy Moon</span>
+			</a>
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>

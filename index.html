@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style> 
+
+.dropbtn {
+  background-color: #FFF682;
+  color: white;
+  padding: 16px;
+  font-size: 14px;
+  border: none;
+  font-family: montserrat;
+  font-size: large; 
+  z-index: 10;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: montserrat;
+  font-size: 14px;
+  font-weight: 100;    
+  font-kerning: auto;
+  font-weight: 450;
+  color: #F062A4;      
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+  body { background-color: #FFF682;
+         overflow: hidden;
+         margin: 0;
+       }
+
+  p  {
+  font-family: montserrat;
+  font-size: 14px;
+  font-weight: 100;    
+  font-kerning: auto;
+  font-weight: 450;
+  text-align: center;
+  color: #F062A4;         
+   }
+    
+    
+  li {
+  float: left;
+  } 
+    
+  a, .dropbtn {
+  display: inline-block;
+  color: #F062A4;
+  font-family: montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  }
+    
+  a:hover, .dropdown:hover .dropbtn {
+  background-color: black;
+  }
+
+  li.dropdown {
+  display: inline-block;
+  }
+    
+  .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item-left {
+  flex: 50%;
+}
+
+.flex-item-right {
+  flex: 50%;
+}
+
+.container { 
+width: 100%
+ }
+
+#game {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 500px;
+}
+
+#rat {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  width: auto;
+  height: 250px;
+}
+
+#ground {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  background-color: #F062A4;
+}
+
+#trap {
+  position: absolute;
+  bottom: 40px;
+  right: -100px; /* Start off-screen */
+  width: auto; /* Adjust based on your image size */
+  height: 50px; /* Maintain aspect ratio */
+  animation: move-trap 2s linear infinite; /* Keeps the animation */
+}
+
+#message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 300;
+  font-family: montserrat;
+  color: #F062A4;
+  text-align: center;
+  display: none;
+}
+
+
+@keyframes move-trap {
+  from {
+    right: -50px;
+  }
+  to {
+    right: 100vw;
+  }
+}
+
+</style>
+    
+</head> 
+<body>
+
+  <div id="header">
+
+  <a href="about.html" target="tabcontent">About</a> 
+       
+  <a href="portfoliopage.html" target="tabcontent">Design</a> 
+
+  <a href="food.html" target="tabcontent">Food</a>  
+
+  <div class="dropdown"> 
+    <button class="dropbtn">Archives</button>
+          <div class="dropdown-content">
+            <a href="fineart.html">Fine Art</a>
+            <a href="photography.html">Photography</a>
+          </div>
+  </div>
+
+  <div class="dropdown"> 
+    <button class="dropbtn">Think</button>
+          <div class="dropdown-content">
+            <a href="ParallelLives.html">Parallel Lives</a>
+          </div>
+  </div>
+
+</div>
+
+  <div id="game">
+    <img id="rat" src="rat/runningRat.gif">
+
+    <div id="ground"></div>
+    <img id="trap" src="Rat/trap.png" alt="Rat Trap">
+    <div id="message"></div>
+    <div id="message"></div>
+
+  </div>
+
+   <script src="script.js"></script> 
+     
+</body> 
+</html>

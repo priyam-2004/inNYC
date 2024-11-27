@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Priyam</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Styling the Body */
+        body {
+            font-family: Montserrat, sans-serif;
+            color: #FFF682;
+            background-color: #F062A4;
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+
+        .home-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 2rem;
+            color: #FFF682;
+            text-decoration: none;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .home-button:hover {
+            color: #FFD700; 
+        }
+
+        /* Header Styling */
+        .header {
+            text-align: center;
+            padding: 3rem 1rem;
+            margin: 20px 0;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+        }
+
+        /* Content Container */
+        .content {
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        /* Section Titles */
+        h2 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #FFF682;
+            text-shadow: 2px 2px #F062A4;
+        }
+
+        /* Text Styling */
+        p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Image Grid */
+        .image-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .image-section div {
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 15px;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 2rem 1rem;
+            font-size: 0.9rem;
+            color: #FFF682;
+            background-color: #F062A4;
+            border-top: 3px solid #FFF682;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Home Button -->
+    <a href="index.html" class="home-button" aria-label="Go to home">
+        &larr; 
+    </a> 
+
+    <header class="header">
+        <h1>👋 Hi, I’m Priyamvada!</h1>
+        <p>Or just Priyam.</p>
+    </header>
+
+    <div class="content">
+        <h2>About Me</h2>
+        <p>
+            I’m Priyamvada—though you can call me Priyam. I’m a passionate graphic designer currently studying at Parsons School of Design in New York City. My favorite fonts are ABC Arizona and Hatton (serif) and Montserrat (sans serif), a reflection of my love for typography and its role in visual storytelling.
+        </p>
+        <p>
+            This website is more than just a portfolio; it’s an immersive exploration of my life in New York—a city that has become my muse. Here, you’ll find glimpses of my journey through art, design projects, photographs I’ve captured, essays I’ve written, and my favorite restaurants. It’s a mosaic of my hobbies and interests, an intimate showcase of the things I love most.
+        </p>
+        <p>
+            The design of my website draws deeply from my identity. The color palette of rani pink and yellow reflects both my heritage and my personality. Rani pink, with its deep connection to Indian festivals and traditions, symbolizes home, while yellow embodies joy and optimism. Together, they create a playful, bubbly atmosphere balanced by a mature sensibility.
+        </p>
+
+        <h2>My New York Journey</h2>
+        <p>
+            Scattered throughout the site, you’ll notice pink rats scurrying across the pages—a whimsical nod to New York’s unofficial mascot. These little creatures embody the city’s grit, charm, and unpredictability, much like my own experience of adapting to life here.
+        </p>
+        <p>
+            But the rats on my site are more than visual quirks—they're part of an interactive game I created called Rat Runner. On the landing page, you’ll encounter a game where a rat navigates its way through obstacles shaped like rat traps. By pressing the space bar, you can make the rat jump over these traps, dodging them to move ahead. Miss a jump, and the game ends—but you can always restart. This game is symbolic of my journey in New York: a constant dance of overcoming obstacles. Sometimes, I stumble. But like the rat, I pick myself up, restart, and keep moving forward.
+        </p>
+        <p>
+            New York has a way of inspiring you when you least expect it—whether it’s through the art in its museums, the stories in its streets, or even the bustling energy of its iconic subways. This city has shaped my creative process, and this website is my way of celebrating that. It’s an invitation to explore not just my work but also my perspective as a designer navigating the dynamic rhythm of New York.
+        </p>
+
+        <h2>📸 Highlights</h2>
+        <div class="image-section">
+            <div>
+                <img src="images/design.jpg" alt="Design Projects">
+                <p>My design journey</p>
+            </div>
+            <div>
+                <img src="images/me.jpg" alt="About Me">
+                <p>🙋‍♀️ Just me</p>
+            </div>
+            <div>
+                <img src="images/art.jpg" alt="Creating Art">
+                <p>Creating in the studio</p>
+            </div>
+            <div>
+                <img src="images/goofypic.jpg" alt="A goofy moment">
+                <p>A goofy moment</p>
+            </div>
+            <div>
+                <img src="images/food.jpg" alt="Enjoying Food">
+                <p>🍕 My love for food</p>
+            </div>
+            <div>
+                <img src="images/brooklyn.jpg" alt="Brooklyn Bridge">
+                <p>Exploring NYC</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>🐭 Let’s explore this digital space together. Click around, and don’t forget to try the Rat Runner game!</p>
+        <p>&copy; 2024 Priyamvada Mundhra. All rights reserved.</p>
+    </footer>
+</body>
+</html>
