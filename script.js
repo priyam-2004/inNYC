@@ -9,11 +9,11 @@ let score = 0;
 function jump() {
   if (isJumping) return;
   isJumping = true;
-  rat.style.transition = "bottom 0.5s";
-  rat.style.bottom = "400px";
+  rat.style.transition = "bottom 0.65s";
+  rat.style.bottom = "450px";
 
   setTimeout(() => {
-    rat.style.bottom = "35px";
+    rat.style.bottom = "30px";
     setTimeout(() => (isJumping = false), 300);
   }, 300);
 }
