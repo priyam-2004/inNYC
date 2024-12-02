@@ -13,7 +13,7 @@ function jump() {
   rat.style.bottom = "400px";
 
   setTimeout(() => {
-    rat.style.bottom = "30px";
+    rat.style.bottom = "35px";
     setTimeout(() => (isJumping = false), 300);
   }, 300);
 }
