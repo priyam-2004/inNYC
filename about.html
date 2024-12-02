@@ -89,15 +89,15 @@
 
         /* Navbar Styling */
         #nav-header {
-            background-color: transparent; /* Transparent background */
+            background-color: transparent; 
             padding: 1rem 0;
             margin-bottom: 20px;
-            text-align: left; /* Align navbar items to the left */
+            text-align: left; 
         }
 
         #nav-header a, .dropbtn-yellow {
             display: inline-block;
-            color: yellow; /* Yellow text color */
+            color: #FFF682; 
             font-family: Montserrat, sans-serif;
             font-size: 20px;
             font-weight: 500;
@@ -107,7 +107,8 @@
         }
 
         #nav-header a:hover, .dropdown:hover .dropbtn-yellow {
-            background-color: transparent;
+            background-color: black;
+
         }
 
         .dropdown {
@@ -118,14 +119,14 @@
         .dropdown-content-yellow {
             display: none;
             position: absolute;
-            background-color: transparent;
+            background-color: #4f4f4f;
             min-width: 160px;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
         }
 
         .dropdown-content-yellow a {
-            color: yellow; /* Yellow text color */
+            color: #F062A4; 
             padding: 12px 16px;
             text-decoration: none;
             display: block;
@@ -151,7 +152,7 @@
     <!-- Navbar Section -->
     <div id="nav-header">
         <a href="index.html" id="home-btn-yellow">Home</a>
-        <a href="about.html" target="tabcontent">About</a> 
+        <a href="about.html" id="about-btn-yellow" target="tabcontent">About</a> 
         <a href="portfoliopage.html" target="tabcontent">Design</a> 
         <a href="food.html" target="tabcontent">Food</a>  
 
@@ -184,10 +185,10 @@
             I’m Priyamvada—though you can call me Priyam. I’m a passionate graphic designer currently studying at Parsons School of Design in New York City. My favorite fonts are ABC Arizona and Hatton (serif) and Montserrat (sans serif), a reflection of my love for typography and its role in visual storytelling.
         </p>
         <p>
-            This website is more than just a portfolio; it’s an immersive exploration of my life in New York—a city that has become my muse. Here, you’ll find glimpses of my journey through art, design projects, photographs I’ve captured, essays I’ve written, and my favorite restaurants. It’s a mosaic of my hobbies and interests, an intimate showcase of the things I love most.
+            This website is an immersive exploration of my life in New York—a city that has become my muse. Here, you’ll find glimpses of my journey through art, design projects, photographs I’ve captured, essays I’ve written, and my favorite restaurants. It’s a mosaic of my hobbies and interests, an intimate showcase of the things I love most.
         </p>
         <p>
-            The design of my website draws deeply from my identity. The color palette of rani pink and yellow reflects both my heritage and my personality. Rani pink, with its deep connection to Indian festivals and traditions, symbolizes home, while yellow embodies joy and optimism. Together, they create a playful, bubbly atmosphere balanced by a mature sensibility.
+            The design of my website draws deeply from my identity. The color palette of pink and yellow reflects both my heritage and my personality. pink, with its deep connection to Indian festivals, attire and traditions, symbolizes home, while yellow embodies joy and optimism. Together, they create a playful, bubbly atmosphere balanced by a mature sensibility.
         </p>
 
         <h2>My New York Journey</h2>
@@ -221,19 +222,31 @@
             </div>
             <div>
                 <img src="images/food.jpg" alt="Enjoying Food">
-                <p>🍕 My love for food</p>
+                <p>Food I’ve enjoyed</p>
             </div>
             <div>
-                <img src="images/brooklyn.jpg" alt="Brooklyn Bridge">
+                <img src="images/travel.jpg" alt="Exploring NYC">
                 <p>Exploring NYC</p>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>🐭 Let’s explore this digital space together. Click around, and don’t forget to try the Rat Runner game!</p>
-        <p>&copy; 2024 Priyamvada Mundhra. All rights reserved.</p>
+        <p>&copy; 2024 Priyamvada Mundhra | All Rights Reserved</p>
     </footer>
+
+    <script>
+        // Switch "About" text to emoji when on about.html
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const aboutButton = document.getElementById('about-btn-yellow');
+            const currentPage = window.location.pathname;
+            if (currentPage.includes('about.html')) {
+                aboutButton.textContent = '🙋‍♀️';  // Emoji for About
+            }
+        });
+    </script>
+</body>
+</html>
 
 </body>
 </html>
