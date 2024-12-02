@@ -3,9 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>Index</title>
 <style> 
 
+/* Keep existing styles */
 .dropbtn {
   background-color: #FFF682;
   color: white;
@@ -50,12 +51,13 @@
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
-  body { background-color: #FFF682;
-         overflow: hidden;
-         margin: 0;
-       }
+body { 
+  background-color: #FFF682;
+  overflow: hidden;
+  margin: 0;
+}
 
-  p  {
+p  {
   font-family: montserrat;
   font-size: 14px;
   font-weight: 100;    
@@ -63,14 +65,13 @@
   font-weight: 450;
   text-align: center;
   color: #F062A4;         
-   }
-    
-    
-  li {
+}
+
+li {
   float: left;
-  } 
-    
-  a, .dropbtn {
+} 
+
+a, .dropbtn {
   display: inline-block;
   color: #F062A4;
   font-family: montserrat;
@@ -79,17 +80,17 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  }
-    
-  a:hover, .dropdown:hover .dropbtn {
-  background-color: black;
-  }
+}
 
-  li.dropdown {
+a:hover, .dropdown:hover .dropbtn {
+  background-color: black;
+}
+
+li.dropdown {
   display: inline-block;
-  }
-    
-  .flex-container {
+}
+
+.flex-container {
   display: flex;
   flex-wrap: wrap;
 }
@@ -103,8 +104,8 @@
 }
 
 .container { 
-width: 100%
- }
+  width: 100%
+}
 
 #game {
   position: fixed;
@@ -151,7 +152,6 @@ width: 100%
   display: none;
 }
 
-
 @keyframes move-trap {
   from {
     right: -50px;
@@ -160,48 +160,51 @@ width: 100%
     right: 100vw;
   }
 }
-
 </style>
-    
 </head> 
 <body>
 
   <div id="header">
+    <a href="index.html" id="home-btn">Home</a>
+    <a href="about.html" target="tabcontent">About</a> 
+    <a href="portfoliopage.html" target="tabcontent">Design</a> 
+    <a href="food.html" target="tabcontent">Food</a>  
 
-  <a href="about.html" target="tabcontent">About</a> 
-       
-  <a href="portfoliopage.html" target="tabcontent">Design</a> 
+    <div class="dropdown"> 
+      <button class="dropbtn">Archives</button>
+      <div class="dropdown-content">
+        <a href="fineart.html">Fine Art</a>
+        <a href="photography.html">Photography</a>
+      </div>
+    </div>
 
-  <a href="food.html" target="tabcontent">Food</a>  
-
-  <div class="dropdown"> 
-    <button class="dropbtn">Archives</button>
-          <div class="dropdown-content">
-            <a href="fineart.html">Fine Art</a>
-            <a href="photography.html">Photography</a>
-          </div>
+    <div class="dropdown"> 
+      <button class="dropbtn">Think</button>
+      <div class="dropdown-content">
+        <a href="ParallelLives.html">Parallel Lives</a>
+      </div>
+    </div>
   </div>
-
-  <div class="dropdown"> 
-    <button class="dropbtn">Think</button>
-          <div class="dropdown-content">
-            <a href="ParallelLives.html">Parallel Lives</a>
-          </div>
-  </div>
-
-</div>
 
   <div id="game">
     <img id="rat" src="rat/runningRat.gif">
-
     <div id="ground"></div>
     <img id="trap" src="Rat/trap.png" alt="Rat Trap">
     <div id="message"></div>
-    <div id="message"></div>
-
   </div>
 
-   <script src="script.js"></script> 
-     
+  <script>
+    // Get the current page URL
+    const currentPage = window.location.pathname.split("/").pop();
+    const homeBtn = document.getElementById("home-btn");
+
+    // If on the home page, display the emoji instead of the text
+    if (currentPage === "index.html" || currentPage === "") {
+      homeBtn.innerHTML = "🏠";
+    } else {
+      homeBtn.innerHTML = "Home";
+    }
+  </script>
+
 </body> 
 </html>
