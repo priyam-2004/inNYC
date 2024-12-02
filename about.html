@@ -21,35 +21,6 @@
             padding: 0 20px;
         }
 
-        /* Navigation Bar Styling */
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #FFF682;
-            padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #F062A4;
-            font-family: Montserrat, sans-serif;
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin: 0 15px;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: #F062A4;
-            color: #FFF682;
-        }
-
         /* Header Styling */
         .header {
             text-align: center;
@@ -115,20 +86,94 @@
             background-color: #F062A4;
             border-top: 3px solid #FFF682;
         }
+
+        /* Navbar Styling */
+        #nav-header {
+            background-color: transparent; /* Transparent background */
+            padding: 1rem 0;
+            margin-bottom: 20px;
+            text-align: left; /* Align navbar items to the left */
+        }
+
+        #nav-header a, .dropbtn-yellow {
+            display: inline-block;
+            color: yellow; /* Yellow text color */
+            font-family: Montserrat, sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        #nav-header a:hover, .dropdown:hover .dropbtn-yellow {
+            background-color: transparent;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content-yellow {
+            display: none;
+            position: absolute;
+            background-color: transparent;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content-yellow a {
+            color: yellow; /* Yellow text color */
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-family: Montserrat, sans-serif;
+            font-size: 14px;
+            font-weight: 450;
+        }
+
+        .dropdown-content-yellow a:hover {
+            background-color: transparent;
+        }
+
+        .dropdown:hover .dropdown-content-yellow {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn-yellow {
+            background-color: transparent;
+        }
     </style>
 </head>
 <body>
+    <!-- Navbar Section -->
+    <div id="nav-header">
+        <a href="index.html" id="home-btn-yellow">Home</a>
+        <a href="about.html" target="tabcontent">About</a> 
+        <a href="portfoliopage.html" target="tabcontent">Design</a> 
+        <a href="food.html" target="tabcontent">Food</a>  
 
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="food.html">Food</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+        <!-- Dropdown for Archives -->
+        <div class="dropdown">
+            <a href="#" class="dropbtn-yellow">Archives</a>
+            <div class="dropdown-content-yellow">
+                <a href="fineart.html" target="tabcontent">Fine Art</a> 
+                <a href="photography.html" target="tabcontent">Photography</a> 
+            </div>
+        </div>
 
-    <header class="header">
+        <!-- Dropdown for Think -->
+        <div class="dropdown">
+            <a href="#" class="dropbtn-yellow">Think</a>
+            <div class="dropdown-content-yellow">
+                <a href="ParallelLives.html" target="tabcontent">Parallel Lives</a> 
+            </div>
+        </div>
+    </div>
+
+      <header class="header">
         <h1>👋 Hi, I’m Priyamvada!</h1>
         <p>Or just Priyam.</p>
     </header>
@@ -189,6 +234,7 @@
         <p>🐭 Let’s explore this digital space together. Click around, and don’t forget to try the Rat Runner game!</p>
         <p>&copy; 2024 Priyamvada Mundhra. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
 
