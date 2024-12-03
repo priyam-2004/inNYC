@@ -2,14 +2,14 @@ const rat = document.getElementById("rat");
 const trap = document.getElementById("trap");
 const message = document.getElementById("message");
 let isJumping = false;
-let gameRunning = true;
+let gameRunning = false; // Initially set to false, as the game should start after a click
 let score = 0;
 
 function jump() {
     if (isJumping) return;
     isJumping = true;
     rat.style.transition = "bottom 0.5s";
-    rat.style.bottom = "450px";
+    rat.style.bottom = "400px";
 
     setTimeout(() => {
         rat.style.bottom = "30px";
@@ -26,7 +26,7 @@ function checkCollision() {
     const verticalOverlap = Math.min(ratRect.bottom, trapRect.bottom) - Math.max(ratRect.top, trapRect.top);
 
     // Check if the overlap is greater than 10px
-    if (horizontalOverlap > 25 && verticalOverlap > 25) {
+    if (horizontalOverlap > 20 && verticalOverlap > 20) {
         return true; // The rat is overlapping the trap by more than 10px
     }
 
@@ -54,6 +54,15 @@ document.addEventListener("keydown", (e) => {
     }
 });
 
+// Add event listener for mouse click to start the game
+document.addEventListener("click", () => {
+    if (!gameRunning) {
+        gameRunning = true;
+        message.style.display = "none"; // Hide the message
+        startGame();
+    }
+});
+
 const gameLoop = setInterval(() => {
     if (gameRunning && checkCollision()) {
         gameRunning = false;
@@ -74,4 +83,3 @@ const gameLoop = setInterval(() => {
     }
 }, 10);
 
-startGame();
