@@ -132,10 +132,10 @@
         #trap {
             position: absolute;
             bottom: 40px;
-            right: -100px; 
+            right: -100px; /* Start off-screen, keeps it still */
             width: auto;
             height: 50px;
-            animation: none; 
+            animation: none; /* Stop the animation initially */
         }
 
         #message {
@@ -148,7 +148,7 @@
             font-family: montserrat;
             color: #F062A4;
             text-align: center;
-            display: block; 
+            display: block; /* Keep the message visible until click */
         }
 
         @keyframes move-trap {
@@ -190,7 +190,7 @@
 
         <div id="ground"></div>
         <img id="trap" src="Rat/trap.png" alt="Rat Trap">
-        <div id="message">Click anywhere to start!</div> 
+        <div id="message">Click anywhere to start!</div> <!-- Initial message for the user -->
     </div>
 
     <script src="script.js"></script> 
@@ -222,4 +222,5 @@
 
 </body> 
 </html>
+
 
