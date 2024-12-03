@@ -8,57 +8,87 @@
 
 <style> 
         
-       p {
-         font-family: montserrat;
-         font-size: 18px;
-         font-weight: 250;    
-         font-kerning: auto;
-         text-align: left;
-         }
+       /* Centering all text */
+        body {
+            font-family: montserrat;
+            text-align: center;
+            background-color: whitesmoke;
+            margin: 0;
+            padding: 0;
+        }
+        
+        p {
+            font-size: 18px;
+            font-weight: 250;    
+            font-kerning: auto;
+            text-align: left;
+        }
         
         pre {
-             font-size: 18px;
-             font-family: montserrat;
-             font-weight: 500;
-             }
+            font-size: 18px;
+            font-family: montserrat;
+            font-weight: 500;
+            text-align: left;
+        }
 
         h1 {
-             font-size: 24px;
-             font-family: montserrat;
-             font-weight: 450;
-             color: #F171AA;
-             padding: 10px ;
-            }    
+            font-size: 24px;
+            font-family: montserrat;
+            font-weight: 450;
+            color: #F171AA;
+            text-align: left;
+            margin-top: 75px;
+            margin-left: 20px;
+        }
 
         b {
             font-weight: 500;
-        }  
+        }
 
-         .container {
-            width: 1000px;
+        .container {
+            width: 100%;
             margin: 0 auto;
-        }     
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
         .column {
-                 float: left;
-                 width: 40%;
-                 padding: 20px;
-                 }
+            width: 40%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
-/* Clear floats after the columns */
-         .row:after {
-             content: "";
-             display: table;
-             clear: both;
-            }
-        
+        /* Back Arrow styling */
+        .back-arrow {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 40px;
+            font-weight: 250; /* Thin stroke */
+            color: #F062A4; /* Pink color */
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-arrow:hover {
+            color: black; /* Slightly darker pink on hover */
+        }
+
     </style>
+</head>
 
-<body height="100%" width="100%" bgcolor= whitesmoke>
+<body>
+
+    <!-- Back arrow linking to portfoliopage.html -->
+    <a href="portfoliopage.html" class="back-arrow">&larr;</a>
 
     <h1> Barilla Rebrand Project </h1>
 
-    <div align=center> <img src="images/barillatoolkit.jpg" alt="Sorry No Image" height="auto" width="80%" align="center"> </div> 
+    <div align=center> <img src="images/barillatoolkit.jpg" alt="Sorry No Image" height="auto" width="60%" align="center"> </div> 
 
     <div class="container">
 
@@ -74,7 +104,8 @@
 
   </div>
 
-<div class="column">   
+<div class="column">
+  <pre>More Info</pre>  
 
 <p> This is a brand redesign project I completed during my freshman year for the "Product, Promotion, and Packaging" class. The goal was to give an evergreen brand like Barilla a fresh look from a Gen Z perspective. The original brand colors were retained to ensure recognizability on the shelf, while the updated font, logo, and packaging were designed to appeal to college students aged 18-25. </p>
 
