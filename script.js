@@ -25,7 +25,7 @@ function checkCollision() {
     const horizontalOverlap = Math.min(ratRect.right, trapRect.right) - Math.max(ratRect.left, trapRect.left);
     const verticalOverlap = Math.min(ratRect.bottom, trapRect.bottom) - Math.max(ratRect.top, trapRect.top);
 
-    // Check if the overlap is greater than 10px
+    // Check if the overlap is greater than 20px
     if (horizontalOverlap > 20 && verticalOverlap > 20) {
         return true; // The rat is overlapping the trap by more than 10px
     }
@@ -82,4 +82,5 @@ const gameLoop = setInterval(() => {
         }
     }
 }, 10);
+
 
