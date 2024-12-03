@@ -8,7 +8,7 @@ let score = 0;
 function jump() {
     if (isJumping) return;
     isJumping = true;
-    rat.style.transition = "bottom 0.65s";
+    rat.style.transition = "bottom 0.5s";
     rat.style.bottom = "450px";
 
     setTimeout(() => {
@@ -26,7 +26,7 @@ function checkCollision() {
     const verticalOverlap = Math.min(ratRect.bottom, trapRect.bottom) - Math.max(ratRect.top, trapRect.top);
 
     // Check if the overlap is greater than 10px
-    if (horizontalOverlap > 20 && verticalOverlap > 20) {
+    if (horizontalOverlap > 25 && verticalOverlap > 25) {
         return true; // The rat is overlapping the trap by more than 10px
     }
 
